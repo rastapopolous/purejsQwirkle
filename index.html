@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Qwirkle!</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/interact-1.2.6.min.js"></script>
+	</head>
+
+	<body>
+		<div id="container" class="clearfix:after">
+			<header>
+			</header>
+			<div id="main">
+			    <div id="playPanel"></div>
+				<div id="board"></div>
+				<div id="tileBagger"></div>
+				<div id = "panelTraysWrapper">
+
+				  <div id="trays"></div>
+				</div>
+			</div>
+
+			<footer>
+				<!--&copy; Footer Goes Here-->
+			</footer>
+		</div><!-- #container -->
+		<script src="js/app.js"></script>
+
+		</script>
+		<div id="overlay">
+			<div id="instructions">
+				<h6><i> Click Instructions Button Again To Close</i></h6>
+				<p>Qwirkle!</p>
+                <p>The object of Qwirkle is score points by creating runs of tiles with the same color or same number</p>
+                <p>First player needs a run of at least three tiles to start</p>
+                <p>All following moves must intersect the existing game horizontally or vertically</p>
+                <p>Your current play is shown on the board in green</p>
+                <p>In place of a move you can trade in tiles by dragging them to the tile bag.  They'll be replaced when your move is finished</p>
+				<p>Click NextPlayer when your move is finished to verify it.  Your main run of tiles will be shown in green.  Side runs will show in red</p>
+                <p>Click again to finish your move, refill your tiles and rotatePlay to the next player</p>
+                <p>Game ends when tile bag is empty and no one can put out tiles, or all tiles have been played</p>
+
+			</div>
+		</div>
+	</body>
+
+</html>
