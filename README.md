@@ -5,10 +5,13 @@ the classic board game reworked with a purejs, functional oop approach
 ##hosted
 * https://codepen.io/jlazar/pen/RpWBvB 
 
-##Install
+##install
 * git clone https://github.com/rastapopolous/purejsQwirkle.git
 * from your browser open the file purejsQwirkle/index.html
 
+##tech
+* plain vanilla javascript
+* interactjs, a draggable library
 ##game logic
 * "Blind sensing" is used to determine if a set of tiles just played is horizontal or vertical
 * Game logic feels its way along the length of the set, checking each tile to determine if it intersects other rows 
