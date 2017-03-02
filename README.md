@@ -4,6 +4,7 @@ the classic board game reworked with a purejs, functional oop approach
 
 
 ##Install
+  git clone
 
 ##Running
 ##game logic
