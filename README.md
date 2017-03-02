@@ -7,8 +7,7 @@ the classic board game reworked with a purejs, functional oop approach
 
 ##Install
 * git clone https://github.com/rastapopolous/purejsQwirkle.git
-
-##Running
+* from your browser open the file purejsQwirkle/index.html
 
 ##game logic
 * "Blind sensing" is used to determine if a set of tiles just played is horizontal or vertical
