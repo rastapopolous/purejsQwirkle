@@ -4,6 +4,7 @@ the classic board game reworked with a purejs, functional oop approach
 
 ##hosted
 * https://codepen.io/jlazar/pen/RpWBvB 
+
 ##Install
 * git clone https://github.com/rastapopolous/purejsQwirkle.git
 
