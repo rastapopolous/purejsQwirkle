@@ -12,6 +12,7 @@ the classic board game reworked with a purejs, functional oop approach
 ##tech
 * plain vanilla javascript
 * interactjs, a draggable library
+
 ##game logic
 * "Blind sensing" is used to determine if a set of tiles just played is horizontal or vertical
 * Game logic feels its way along the length of the set, checking each tile to determine if it intersects other rows 
