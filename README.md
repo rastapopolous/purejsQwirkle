@@ -2,11 +2,13 @@
 the classic board game reworked with a purejs, functional oop approach
 
 
-
+##hosted
+* 
 ##Install
-  git clone
+* git clone https://github.com/rastapopolous/purejsQwirkle.git
 
 ##Running
+
 ##game logic
 * "Blind sensing" is used to determine if a set of tiles just played is horizontal or vertical
 * Game logic feels its way along the length of the set, checking each tile to determine if it intersects other rows 
