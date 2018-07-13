@@ -516,8 +516,6 @@
             var xCoords = [];
             var yCoords = [];
 
-
-
             for (var i = 0; i < played.length; i++) {
                 xCoords.push(parseInt(played[i].parentNode.dataset.x));
                 yCoords.push(parseInt(played[i].parentNode.dataset.y));
@@ -606,7 +604,6 @@
 //FILL GAPS IN RUN BETWEEN PIECES PLAYED
 ///////////////////////////////////////
         function fillGaps (xOrY, coordinatesFix, yOrX, coordinatesRun) {
-
             coordinatesRun.sort(function(a, b) {
                 if (b - a > 1) {
                     var gapRunCoord = b - 1;
@@ -681,7 +678,6 @@
 
             console.log(xOrY, yOrX);
             isSwitchXY += 1;
-
             console.log('ATSET XOrY: '+xOrY);
             console.log(played);
 
@@ -825,7 +821,6 @@
                 else if (veryFirstMove === false) {
                     //runNumber set to 3  because any checkSideDangler option below will require it
                     runNumber = 3;
-
                     //If you havent run all the DanglerCycles, run the next one
                     if (sideDanglerCycles < played.length){
                         console.log('sideDanglerCycles(Pre+1): ', sideDanglerCycles);
@@ -838,7 +833,6 @@
                     }else if (sideDanglerCycles === played.length){
                         console.log('NEARLY THERE!!!');
                         console.log('VMR: ', verifiedMainRun);
-
                         if (verifiedMainRun === false) {
                             verifyMainRun(xOrY, coordinatesFix, yOrX, coordinatesRun);
                         }else if (verifiedMainRun === true) {
@@ -879,8 +873,6 @@
                     sideDanglerFlag = true;
                     assignScore(getSides, tileSet, xOrY, coordinatesFix, yOrX, coordinatesRun);
                 }else (dialBackToTwo(xOrY, coordinatesFix, yOrX, coordinatesRun));
-
-
             }else if (runNumber ===5) {
                 runNumber = 1;
                 isSwitchXY = 0;
@@ -902,17 +894,14 @@
                 console.log('CCCRRR VMR: ',coordinatesRun);
                 console.log('NEW VFM:', veryFirstMove);
                 assignScore(played, tileSet, xOrY, coordinatesFix, yOrX, coordinatesRun);
-
             }else if (veryFirstMove === false) {
                 console.log('FALSEYFALSE!!!');
-
                 if (verifiedMainRun === false) {
                     console.log('FALSEYFALSE!!!');
                     //remove this when final resets are implented
                     console.log('FALSEYFALSE!!!');
                     var checkIntersect = errorChecker('intersect');
                     console.log('checkIntersect:', checkIntersect);
-
                     if (checkIntersect === false) {
                         errorAlerts('hasIntersect');
                     }else if (checkIntersect === true) {
@@ -923,7 +912,6 @@
                         if (playClass.length === 1 && mainClass.length === 0) {
                             minusOne = true;
                         }
-
                         var selectedEls = document.querySelectorAll('.mainDangler, .gap, .play');
                         assignScore(selectedEls, tileSet, xOrY, coordinatesFix, yOrX, coordinatesRun, minusOne);
                     }
@@ -951,16 +939,13 @@
             //called By isEndRunDone  runNum = 2
             //need to make sure this is accessible from the object/method calling it
             document.getElementById('validateButton').innerHTML = 'Click Again!';
-
             runNumber = 2;
             var elementIDs = [];
             var comparePieces = [];
             console.log('CCCRRR assignScor: ',coordinatesRun);
-
             for (var i = 0; i < elements.length; i++) {
                 elementIDs.push(parseInt(elements[i].id));
             }
-
             elementIDs.forEach(function(elementid) {
                 tileSet.filter(function (tile) {
                     if (tile.id === elementid) {
@@ -968,52 +953,39 @@
                     }
                 });
             });
-
             comparePieces.forEach(function (piece) {
                 console.log(piece.color);
             });
-
             console.log('COMPAREPIECES:' ,comparePieces);
             console.log(elementIDs);
             console.log(tileSet);
-
             var colorCheck = comparePieces.every(function (tile) {
                 return tile.color === comparePieces[0].color;
             });
-
             var shapeCheck = comparePieces.every(function (tile) {
                 return tile.shape === comparePieces[0].shape;
             });
-
             console.log(playerArr[0].score);
-
             if (colorCheck === true || shapeCheck === true) {
                 console.log('NEWPOINTS:',elements.length);
                 comparePieces.forEach(function(piece) {
                     playerArr[0].score += 1;
                 });
-
                 if (minusOne === true) {
                     playerArr[0].score -= 1;
                 }
-
-
                 console.log('SCORE FOR',playerArr[0].name,': ', playerArr[0].score);
-
                 if (sideDanglerFlag === true){
                     console.log('LOWERINGTHEFLAGS');
                     var removeSD = document.querySelectorAll('.sideDanglerScore');
                     console.log ('FIRST RSD:',removeSD);
-
                     for (var i = 0; i < removeSD.length; i ++) {
                           removeSD[i].classList.remove('sideDanglerScore');
                     }
-
                     removeSD = document.querySelectorAll('.sideDanglerScore');
                     console.log ('SECOND RSD:', removeSD);
                     sideDanglerFlag = false;
                     isEndRunDone(xOrY, coordinatesFix, yOrX, coordinatesRun);
-
                 }else if (sideDanglerFlag === false) {
                     if (veryFirstMove === true){
                         veryFirstMove = false;
@@ -1023,19 +995,16 @@
                         //isEndRunDone(xOrY, coordinatesFix, yOrX, coordinatesRun);
                     }
                 }
-
             }else {
                   errorAlerts ('badPlay');
                   toggle = true;
                   var findDangler = document.querySelectorAll('.mainDangler, .sideDanglerRed, .sideDanglerScore, .gap');
-
                   for (var i = 0; i < findDangler.length; i ++) {
                       findDangler[i].classList.remove('mainDangler');
                       findDangler[i].classList.remove('sideDanglerRed');
                       findDangler[i].classList.remove('sideDanglerScore');
                       findDangler[i].classList.remove('gap');
                   }
-
                   runNumber = 5;
                   isEndRunDone (xOrY, coordinatesFix, yOrX, coordinatesRun);
             }
@@ -1094,7 +1063,6 @@
             elementOrigin: { x: .5, y: .5 },
             endOnly: true
         },
-
         intertia: true,
         restrict: {
             //restriction: "parent",
@@ -1121,7 +1089,6 @@
             thisTile.style.transform = '';
             thisTile.removeAttribute('data-x');
             thisTile.removeAttribute('data-y');
-
             event.target.appendChild(thisTile.parentNode.removeChild(thisTile));
             //adds '.play' class to tile when tile is dragged onto a boardsquare
             if (event.target.classList.contains('boardSquare')) {
@@ -1133,7 +1100,6 @@
                 event.relatedTarget.classList.add('inTray');
                 event.relatedTarget.classList.remove('play');
             }
-
             if (event.target.classList.contains('bagDrop')) {
                 var trashTile = parseInt(thisTile.id);
                 console.log('TRASHTILE: ',trashTile);
@@ -1148,8 +1114,6 @@
                 console.log(tileSet);
             }
         })
-
-
         .on('dragleave', function (event) {
             event.draggable.snap(false);
             event.relatedTarget.classList.remove('play');
