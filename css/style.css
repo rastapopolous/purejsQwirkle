@@ -199,6 +199,26 @@ footer{
      border-radius: 4px;
 }
 
+/* optional tile style for codepen, which doesnt have
+ tile images
+.tile{
+     width: 36px;
+    height: 36px;
+    display: block;
+    position: relative;
+    background-size: 33px 33px;
+    margin: 1px -5px -5px 1px;
+    border: gray 2px solid;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 2em;
+    color: rgb(152, 151, 158);
+}
+*/
+
 .tileBagStyle{
      height: 110px;
      width: 10%;
