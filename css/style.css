@@ -29,9 +29,9 @@ body  {
      font-size: 12px;
      line-height: 1.4;
      font-family: Helvetica, Arial, sans-serif;
-     background-color: white;
-     //rgba(192,192,192,0.85);
-     //background-image: url("../images/psycho.jpg");
+     /* background-color: lightblue; */
+     /* rgba(192,192,192,0.85); */
+     /* background-image: url("../images/psycho.jpg"); */
      /*background-color: rgb(0, 102, 255);*/
      background-size: cover;
      background-position: center;
@@ -78,10 +78,8 @@ footer{
 }
 
 #board{
-     /*height: 570px;
-     width: 40%;*/
      height: 600px;
-     width: 54%;
+     width: 58%;
      margin-left: 10px;
      margin-top: 11px;
      display: inline-block;
@@ -102,11 +100,12 @@ footer{
 }
 
 #panelTraysWrapper{
-     width: 34%;
+     width: 35%;
      height: 1000px;
-     margin-right: 5px;
+     /* margin-right: 5px; */
      display: inline-block;
-     float: right;
+     display: flex;
+     align-content: left;
 }
 
 #playPanel{
@@ -129,9 +128,12 @@ footer{
      height: 44px;
      width: 44px;
      margin: 0px 1px 0px 0px;
+     border: white 2px solid;
      /*margin: 1px 2px 0px 2px;*/
-     border: white 3px solid;
+     
 }
+
+
 
 .playerName {
     display: block;
@@ -180,10 +182,10 @@ footer{
 .traySquare{
      height: 44px;
      width: 44px;
-     margin: 10px;
-     border: white 1px solid;
-     margin: 1px 2px 1px 3px;
-     border: white 3px solid;
+     margin: 0px 1px 0px 0px;
+     border:  3px solid white;
+     /* margin: 1px 2px 1px 3px;
+     border: white 3px solid; */
 }
 
 .tile{
@@ -198,16 +200,15 @@ footer{
 }
 
 .tileBagStyle{
-     height: 150px;
-     width: 10.25%;
+     height: 110px;
+     width: 10%;
      display: inline-block;
      margin: 11px 2px 0px 2px;
-
+     border-radius: 5px;
+     border: 3px solid rgba(192,192,192);
      padding-left: 22px;
      float: left;
      background-color: green;
-     border: white 3px solid;
-     border-radius: 5px;
      font: bold 22px arial;
      background-color: green;
      color: rgb(218,214, 214);
@@ -299,51 +300,51 @@ footer{
 }
 
 /*TILE IMAGES//////////////////////////////////////////*/
-.square{
-     content:url('/Users/josh/Desktop/PROJECTS/QwirkleJS/images/square.png');
+.square {
+     content:url('../images/square.png');
 }
 
-.circle{
-     content:url('/Users/josh/Desktop/PROJECTS/QwirkleJS/images/circle.png');
+.circle {
+     content:url('../images/circle.png');
 }
 
-.star{
-     content:url('/Users/josh/Desktop/PROJECTS/QwirkleJS/images/cross.png');
+.star {
+     content:url('../images/cross.png');
 }
 
-.diamond{
-     content:url('/Users/josh/Desktop/PROJECTS/QwirkleJS/images/diamond.png');
+.diamond {
+     content:url('../images/diamond.png');
 }
 
-.tri{
-     content:url('/Users/josh/Desktop/PROJECTS/QwirkleJS/images/tri.png');
+.tri {
+     content:url('../images/tri.png');
 }
 
-.octo{
-     content:url('/Users/josh/Desktop/PROJECTS/QwirkleJS/images/octo.png');
+.octo {
+     content:url('../images/octo.png');
 }
 
-.red{
+.red {
      background-color:red;
 }
 
-.orange{
+.orange {
      background-color:orange;
 }
 
-.yellow{
+.yellow {
      background-color:yellow;
 }
 
-.purple{
+.purple {
      background-color:purple;
 }
 
-.green{
+.green {
      background-color:green;
 }
 
-.blue{
+.blue {
      background-color:blue;
 }
 
